@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hampi Tourism - Famous Places</title>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px 0;
+            width: 90%;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .image-container img.active {
+            display: block;
+        }
+
+        .content {
+            flex: 1;
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .content ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .content ol li {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            transition: opacity 0.3s ease, color 0.3s ease;
+            color: #444;
+            border-left: 4px solid #f0f0f0;
+            padding-left: 10px;
+        }
+
+        .content ol li:hover {
+            color: #f04a2c;
+            border-left: 4px solid #f04a2c;
+        }
+
+        .content ol li.active {
+            color: #333;
+            font-weight: bold;
+            border-left: 4px solid #f04a2c;
+        }
+
+        .content ol li.inactive {
+            opacity: 0.3;
+        }
+
+        .content ol li .title {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #f04a2c;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #263376;
+            text-transform: uppercase;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <!-- Left Image Section -->
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Pin_hole_image_Sree_Virupaksha_temple_Hampi.jpg" alt="Virupaksha Temple" class="active" id="image-1">
+            <img src="pexels-nandhukumar-2451222.jpg" alt="Hemakuta Hill" id="image-2">
+            <img src="168e49d1-fb78-45a8-9137-e9b2e605e3e0.jpeg.jpg" alt="virupaksha temple" id="image-4">
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="content">
+            <div class="section-title">Virupaksha Temple</div>
+            <div class="section-description">Experience the spiritual essence of this ancient temple, each with a story to tell!</div>
+            <ol>
+                <li data-image="image-1" class="active">
+                    <span class="title">1.What's Unique?</span>
+                    The temple showcases Dravidian architectural style with intricate carvings, murals, and detailed sculptures.The gopuram (entrance tower) is 50 meters tall and elaborately decorated.
+                    A natural optical phenomenon occurs in the temple: a small hole in the temple projects an inverted image of the temple’s gopuram onto a wall in one of the inner sanctums. This is an example of a natural camera obscura.
+                </li>
+                <li data-image="image-2">
+                    <span class="title">2.Location</span>
+                    Just a short walk from the Virupaksha Temple, Hemakuta Hill is home to numerous smaller temples and shrines. The hill offers panoramic views of the surrounding landscape and is a great spot for photography.
+                </li>
+                <li data-image="image-4">
+                    <span class="title">3.History</span>
+                    The Virupaksha Temple is believed to have been originally established in the 7th century during the Chalukya dynasty, with references to it found in ancient texts and inscriptions. The earliest structure in the temple complex was built by the Chalukya King Vikramaditya II (c. 733-744 CE) to honor Lord Shiva in his form as Virupaksha.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="section">
+        <div class="image-container">
+            <img src="https://scontent.fmyq1-1.fna.fbcdn.net/v/t1.6435-9/156484361_498010828229622_4765482270870723303_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6xHbRJP0WhwQ7kNvgFCftd_&_nc_zt=23&_nc_ht=scontent.fmyq1-1.fna&_nc_gid=AtwDN2RsQOR-xih1aMQBmLv&oh=00_AYDx8PM90MPPZEYYEqs8xi9FQGMwR9q5Hge6SJSPvwtxRA&oe=67A5E4B3" alt="mahanavami dibba" class="active" id="image-5">
+            <img src="https://i.pinimg.com/736x/8d/21/cc/8d21ccd663f33af82ce35258facf121e.jpg" alt="queens bath" id="image-6">
+            <img src="mahanavami dibba.jpg" alt="mahanavami dibba" id="image-7">
+        </div>
+        <div class="content">
+            <div class="section-title">Mahanavami Dibba</div>
+            <div class="section-description">Royal platform symbolizing king's divine authority, each with a story to tell!</div>
+            <ol>
+                <li data-image="image-5" class="active">
+                    <span class="title">1.What's Unique?</span>
+                    The Mahanavami Dibba was a royal platform used during the Vijayanagara Empire. It is believed to have been used by the royal family to observe Mahanavami celebrations, a grand festival dedicated to the worship of Goddess Durga. The platform is elevated and constructed with stepped terraces, providing an excellent vantage point for observing festivities and royal activities below.
+                </li>
+                <li data-image="image-6">
+                    <span class="title">2.Location</span>
+                    Located a short distance from Mahanavami Dibba, the Queen’s Bath is a beautiful and ornate structure that was once used by the royal family for bathing and relaxation. It features a large rectangular pool, intricate arches, and an elegant design, symbolizing the luxury of the Vijayanagara rulers.
+                </li>
+                <li data-image="image-7">
+                    <span class="title">2.History</span>
+                    The Mahanavami Dibba was built during the 15th century, most likely under the rule of Krishnadevaraya (reigned 1509–1529), one of the most powerful and celebrated kings of the Vijayanagara Empire. The rituals and ceremonies conducted on this platform were an important part of maintaining the king’s legitimacy and the prosperity of the empire.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="image-container">
+            <img src="https://scontent.fmyq1-1.fna.fbcdn.net/v/t1.6435-9/156484361_498010828229622_4765482270870723303_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6xHbRJP0WhwQ7kNvgFCftd_&_nc_zt=23&_nc_ht=scontent.fmyq1-1.fna&_nc_gid=AtwDN2RsQOR-xih1aMQBmLv&oh=00_AYDx8PM90MPPZEYYEqs8xi9FQGMwR9q5Hge6SJSPvwtxRA&oe=67A5E4B3" alt="mahanavami dibba" class="active" id="image-5">
+            <img src="https://i.pinimg.com/736x/8d/21/cc/8d21ccd663f33af82ce35258facf121e.jpg" alt="queens bath" id="image-6">
+            <img src="mahanavami dibba.jpg" alt="mahanavami dibba" id="image-7">
+        </div>
+        <div class="content">
+            <div class="section-title">Stone Chariot</div>
+            <div class="section-description">Royal platform symbolizing king's divine authority, each with a story to tell!</div>
+            <ol>
+                <li data-image="image-5" class="active">
+                    <span class="title">1.What's Unique?</span>
+                    The wheels of the chariot were originally movable, but they are now fixed to protect the structure from further damage. It is dedicated to Garuda, the divine vehicle of Lord Vishnu, and once housed an idol of Garuda, which is now missing. The carvings on the chariot depict mythological scenes, floral patterns, and intricately crafted animals, showcasing the exceptional artistry of the Vijayanagara artisans.
+
+                </li>
+                <li data-image="image-6">
+                    <span class="title">2.Location</span>
+                    The Stone Chariot is located within the Vittala Temple Complex in Hampi, Karnataka, India. The chariot is centrally placed in the temple courtyard and surrounded by other stunning structures, including musical pillars and mandapas.
+
+
+                </li>
+                <li data-image="image-7">
+                    <span class="title">2.History</span>
+                    Built during the reign of *King Krishnadevaraya* (1509–1529), the Stone Chariot symbolizes the prosperity and artistic legacy of the Vijayanagara Empire. It was inspired by the Konark Sun Temple’s chariot in Odisha, though the Hampi chariot is more detailed and compact.
+
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="image-container">
+            <img src="https://scontent.fmyq1-1.fna.fbcdn.net/v/t1.6435-9/156484361_498010828229622_4765482270870723303_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6xHbRJP0WhwQ7kNvgFCftd_&_nc_zt=23&_nc_ht=scontent.fmyq1-1.fna&_nc_gid=AtwDN2RsQOR-xih1aMQBmLv&oh=00_AYDx8PM90MPPZEYYEqs8xi9FQGMwR9q5Hge6SJSPvwtxRA&oe=67A5E4B3" alt="mahanavami dibba" class="active" id="image-5">
+            <img src="https://i.pinimg.com/736x/8d/21/cc/8d21ccd663f33af82ce35258facf121e.jpg" alt="queens bath" id="image-6">
+            <img src="mahanavami dibba.jpg" alt="mahanavami dibba" id="image-7">
+        </div>
+        <div class="content">
+            <div class="section-title">Hazara Rama Swamy Temple</div>
+            <div class="section-description">Royal platform symbolizing king's divine authority, each with a story to tell!</div>
+            <ol>
+                <li data-image="image-5" class="active">
+                    <span class="title">1.What's Unique?</span>
+                    The Hazara Rama Temple is renowned for its extensive bas-relief panels that intricately depict scenes from the **Ramayana*, one of India's greatest epics. These carvings illustrate various episodes from Lord Rama's life, showcasing the artisans' exceptional skill and attention to detail. The temple exhibits a unique blend of **Dravidian and Vijayanagara architectural styles*. It features ornate pillars, decorative motifs, and a sanctum sanctorum (garbhagriha) that aligns with traditional Hindu temple architecture.
+                </li>
+                <li data-image="image-6">
+                    <span class="title">2.Location</span>
+                    It is strategically positioned near other significant structures such as the **Vittala Temple Complex*, making it easily accessible to visitors exploring the heart of Hampi's historical and cultural landscape.
+
+                </li>
+                <li data-image="image-7">
+                    <span class="title">2.History</span>
+                    Constructed During the Vijayanagara Empire: The Hazara Rama Temple was built in the early 16th century under the patronage of **King Krishnadevaraya*, one of the most illustrious rulers of the Vijayanagara Empire. His reign is often regarded as the golden age of South Indian culture, art, and architecture. The temple not only served as a place of worship but also as a symbol of the king's devotion to Lord Rama. The elaborate carvings depicting Rama's victories and virtues were intended to inspire loyalty and valor among the subjects and the military.
+
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+
+        sections.forEach((section) => {
+            const listItems = section.querySelectorAll('.content ol li');
+            const images = section.querySelectorAll('.image-container img');
+
+            listItems.forEach((item) => {
+                item.addEventListener('mouseenter', () => {
+                    // Highlight the hovered item
+                    listItems.forEach((li) => li.classList.remove('active', 'inactive'));
+                    item.classList.add('active');
+                    listItems.forEach((li) => {
+                        if (!li.classList.contains('active')) {
+                            li.classList.add('inactive');
+                        }
+                    });
+
+                    // Change the image
+                    const targetImageId = item.getAttribute('data-image');
+                    images.forEach((img) => {
+                        img.classList.remove('active');
+                        if (img.id === targetImageId) {
+                            img.classList.add('active');
+                        }
+                    });
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    // Reset items to normal state when hover ends
+                    listItems.forEach((li) => li.classList.remove('inactive'));
+                });
+            });
+        });
+    </script>
+</body>
+</html>

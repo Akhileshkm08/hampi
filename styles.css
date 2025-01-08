@@ -1,0 +1,448 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #1c4f3a;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.navbar .logo {
+    flex-grow: 1; /* Pushes the logo to the left */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-links {
+    flex-grow: 2; /* Centers the nav links */
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-links a:hover {
+    color: #f4a261;
+    transform: scale(1.1);
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative; /* Allows video to be positioned behind content */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    /* padding: 0 2rem; */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-video {
+    position: absolute; /* Position the video behind the content */
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1; /* Ensures the video is behind the text content */
+    filter: brightness(0.7);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    animation: slideInDown 2s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: slideInUp 2s ease-out;
+}
+
+.hero-content .btn {
+    background: #f4a261;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero-content .btn:hover {
+    background: #e76f51;
+    transform: scale(1.1);
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50vh;
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.history-content {
+    max-width: 980px;
+    margin-bottom: 2rem; /* Adds space between the text and the button */
+}
+
+.history h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.history p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.history .btn {
+    background: #f4a261;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.history .btn:hover {
+    background: #e76f51;
+    transform: scale(1.1);
+}
+
+
+/* Places Section */
+
+
+
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Team Section */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.person {
+    flex: 1 1 20%; /* Adjusts each person's block width */
+    margin: 0.5rem;
+    text-align: left;
+}
+
+.person p {
+    margin: 0.5rem 0;
+}
+
+.person strong {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .places-container {
+        flex-direction: column;
+    }
+}
+/* Custom Modern Scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Narrow scrollbar width */
+    background: transparent;
+    transition: width 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar:hover {
+    width: 16px; /* Wider scrollbar on hover */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(45deg, #f4f4f4, #e0e0e0); /* Gradient track */
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Scrollbar Thumb (Handle) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f4a261, #e76f51); /* Gradient thumb */
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Shadow for a modern effect */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #e76f51, #f4a261); /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly scale up the thumb */
+}
+
+/* Optional Smooth Scroll Effect for Navigation */
+html {
+    scroll-behavior: smooth;
+}
+.changecontent::after{
+    content: ' ';
+    color: #f4a261;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{content: "virupaksha Temple";}
+    25%{content: "Vijaya Vittala Temple";}
+    50%{content: "lotus Mahal";}
+    75%{content: "Lakshmi Narasimha Temple";}
+    100%{content: "queens Bath";}
+
+} 
+
+
+
+
+/*how to reach*/
+/* Section Styling */
+.how-to-reach {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(to bottom, #f7faff, #e3edf4);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-to-reach h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #1c4f3a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease;
+}
+
+/* Reach Container */
+.reach-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Individual Cards */
+.reach-card {
+    background: #fff;
+    flex: 1;
+    max-width: 300px;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.reach-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.reach-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.reach-card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Hover Effect */
+.reach-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.reach-card:hover .icon {
+    transform: scale(1.2) rotate(360deg);
+    color: #f4a261;
+}
+
+/* Icons */
+.icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1c4f3a;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Card Content */
+.reach-card h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1c4f3a;
+    margin-bottom: 1rem;
+}
+
+.reach-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .reach-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .reach-card {
+        max-width: 100%;
+    }
+}
