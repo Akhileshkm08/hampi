@@ -76,7 +76,7 @@ header {
     height: auto;
     object-fit: cover; /* Ensures the video covers the entire section */
     z-index: -1; /* Ensures the video is behind the text content */
-    filter: brightness(0.7);
+    filter: brightness(0.8);
 }
 
 .hero-content h1 {
@@ -156,11 +156,6 @@ header {
 }
 
 
-/* Places Section */
-
-
-
-
 /* Footer */
 .footer {
     background: #333;
@@ -170,7 +165,7 @@ header {
     animation: fadeIn 2s ease-in-out;
 }
 
-.footer h3 {
+.footer h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -178,6 +173,10 @@ header {
 .footer p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+
+}
+.footer marquee {
+    color:#f4a261
 }
 
 /* Team Section */
@@ -191,7 +190,7 @@ header {
 .person {
     flex: 1 1 20%; /* Adjusts each person's block width */
     margin: 0.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 .person p {
@@ -379,7 +378,7 @@ html {
     animation-delay: 0.9s;
 }
 
-/* Hover Effect */
+/* hover effect */
 .reach-card:hover {
     transform: translateY(-10px) scale(1.05);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -391,7 +390,7 @@ html {
     color: #f4a261;
 }
 
-/* Icons */
+/* icons */
 .icon {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -399,7 +398,7 @@ html {
     transition: transform 0.4s ease, color 0.4s ease;
 }
 
-/* Card Content */
+/* card content */
 .reach-card h3 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -413,7 +412,7 @@ html {
     line-height: 1.6;
 }
 
-/* Animations */
+/* animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
